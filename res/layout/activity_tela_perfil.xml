@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".TelaPerfil">
+    
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgUser"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/white"
+        android:padding="5dp"
+        app:shapeAppearanceOverlay="@style/circular"
+        app:strokeWidth="3dp"
+        app:strokeColor="@color/black"
+        app:srcCompat="@drawable/ic_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ButtonUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="4dp"
+        android:clickable="true"
+        app:backgroundTint="@color/gray"
+        app:srcCompat="@drawable/ic_photo_camera"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUser"
+        app:layout_constraintEnd_toEndOf="@+id/imgUser"
+        android:contentDescription="TODO"
+        android:focusable="true"/>
+
+    <Button
+        android:id="@+id/bt_voltar"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:drawableTop="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="@id/iconeUser"
+        app:layout_constraintEnd_toEndOf="@id/iconeUser"
+        app:layout_constraintTop_toTopOf="@id/imgUser"/>
+
+    <ImageView
+        android:id="@+id/iconeUser"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgUser"/>
+
+    <TextView
+        android:id="@+id/textUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="40dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iconeUser"
+        app:layout_constraintTop_toBottomOf="@id/imgUser"/>
+
+    <ImageView
+        android:id="@+id/iconeEmail"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconeUser"/>
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="31dp"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iconeEmail"
+        app:layout_constraintTop_toBottomOf="@id/textUser"/>
+
+    <Button
+        android:id="@+id/bt_save"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/red"
+        android:text="Salvar"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="5dp"
+        android:drawableTop="@drawable/ic_save"
+        app:layout_constraintTop_toBottomOf="@id/textEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_sair"
+        tools:ignore="MissingConstraints"/>
+    
+    <Button
+        android:id="@+id/bt_sair"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/black"
+        android:text="Deslogar"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="5dp"
+        android:drawableTop="@drawable/ic_exit"
+        app:layout_constraintTop_toBottomOf="@id/textEmail"
+        app:layout_constraintStart_toEndOf="@id/bt_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_sair"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logotipo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/progressbar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

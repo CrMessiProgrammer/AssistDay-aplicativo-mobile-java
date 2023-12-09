@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AssistDay</string>
+    <string name="entrar">Entrar</string>
+    <string name="text_cadastro">Não tem conta? Cadastre-se aqui!</string>
+    <string name="title_cadastro">Junte-se a nós!</string>
+</resources>
